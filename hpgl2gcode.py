@@ -32,11 +32,10 @@ for line in f:
   # https://docs.python.org/3.6/tutorial/floatingpoint.html
   x = format(float(mpa.group(1)) / upm, '.2f')
   y = format(float(mpa.group(2)) / upm, '.2f')
-  print("G1 X",x," Y",y," F",feed,sep="")
+  print(f"G1 X{x} Y{y}")
  else:
   if re.search('^PU',line ):
-   print("G1 Z",zup," F",feed,sep="")
+   print(f"G1 Z{zup}")
   else:
    if re.search('^PD',line ):
-    print("G1 Z",zdn," F",feed,sep="")
- 
+    print(f"G1 Z{zdn}")
