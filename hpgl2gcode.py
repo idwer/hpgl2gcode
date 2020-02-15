@@ -16,7 +16,7 @@ else:
 #constants
 zup=5 # 5mm should be safe enough
 zdn=0 # using 0, for engraving negative values to be used
-upm=40 # hpgl units per mm (in theory should be 40.2)
+upm = 40.2 # hpgl units per mm (in theory should be 40.2)
 epm=0 # extrude per mm - in case I'm trying to plot with PLA
 feed=500 #default feedrate
 
