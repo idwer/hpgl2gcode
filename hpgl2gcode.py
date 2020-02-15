@@ -29,8 +29,9 @@ for line in f:
  if re.search('^PA',line):
   #parse a bit
   mpa=pa.match(line);
-  x=int(mpa.group(1))/upm
-  y=int(mpa.group(2))/upm
+  # https://docs.python.org/3.6/tutorial/floatingpoint.html
+  x = format(float(mpa.group(1)) / upm, '.2f')
+  y = format(float(mpa.group(2)) / upm, '.2f')
   print("G1 X",x," Y",y," F",feed,sep="")
  else:
   if re.search('^PU',line ):
