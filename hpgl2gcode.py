@@ -30,8 +30,8 @@ for line in f:
   #parse a bit
   mpa=pa.match(line);
   # https://docs.python.org/3.6/tutorial/floatingpoint.html
-  x = format(float(mpa.group(1)) / upm, '.2f')
-  y = format(float(mpa.group(2)) / upm, '.2f')
+  x = format(float(mpa.group(1)) / upm, '.4f')
+  y = format(float(mpa.group(2)) / upm, '.4f')
   print(f"G1 X{x} Y{y}")
  else:
   if re.search('^PU',line ):
